@@ -34,11 +34,11 @@ signature = tk.Label(window, text='by Diego H. Vanni - dvanni@paypal.com')
 signature.config(font=('helvetica', 12))
 canvas.create_window(900, 990, window=signature)
 
-#creating output file using "UTF-8+BOM" encoding to avoid issues with special char
-o = open(os.getcwd()+"/Content.json", "w+", 1, "utf-8-sig", "Save File Error!") #generating UTF-8+BOM
-o.write("{\"smartling\" : {\"placeholder_format_custom\" : [\"\\\{.*\\\}|@.*?@\"],\"translate_paths\" : [{\"path\" : \"/content/*\",\"exclude_path\" : \"*/keyName\"},{\"path\" : \"/content/*\",\"exclude_path\" : \"*/type\"},{\"path\" : \"/content/*\",\"exclude_path\" : \"*/description\"}]},\"walletNumber\" : 3450004,\"channel\" : \"consumer\",\"content\" : [")
-
 def createJSON():
+
+#creating output file using "UTF-8+BOM" encoding to avoid issues with special char
+    o = open(os.getcwd()+"/Content.json", "w+", 1, "utf-8-sig", "Save File Error!") #generating UTF-8+BOM
+    o.write("{\"smartling\" : {\"placeholder_format_custom\" : [\"\\\{.*\\\}|@.*?@\"],\"translate_paths\" : [{\"path\" : \"/content/*\",\"exclude_path\" : \"*/keyName\"},{\"path\" : \"/content/*\",\"exclude_path\" : \"*/type\"},{\"path\" : \"/content/*\",\"exclude_path\" : \"*/description\"}]},\"walletNumber\" : 3450004,\"channel\" : \"consumer\",\"content\" : [")
 
     #variables dictionary
     keyname = {}
